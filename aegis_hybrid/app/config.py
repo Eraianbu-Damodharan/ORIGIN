@@ -4,7 +4,16 @@ SQL_ERROR_PATTERNS = [
     r"unclosed quotation mark after the character string",
     r"quoted string not properly terminated",
     r"postgresql.*error",
-    r"sqlite.*error"
+    r"sqlite.*error",
+    r"mysql.*error",
+    r"sql syntax error",
+    r"syntax error near input"
+]
+
+HEADERS_TO_CHECK = [
+    "Content-Security-Policy",
+    "X-Frame-Options",
+    "Strict-Transport-Security"
 ]
 
 XSS_PAYLOADS = {

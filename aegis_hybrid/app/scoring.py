@@ -1,13 +1,13 @@
 def calculate_confidence(rule_score, anomaly_score, evidence_score):
     confidence = (
-        0.35 * rule_score +
-        0.30 * anomaly_score +
-        0.35 * evidence_score
+        0.45 * rule_score +
+        0.25 * anomaly_score +
+        0.30 * evidence_score
     )
 
-    if confidence >= 0.80:
+    if confidence >= 0.65:
         severity = "High"
-    elif confidence >= 0.55:
+    elif confidence >= 0.40:
         severity = "Medium"
     else:
         severity = "Low"

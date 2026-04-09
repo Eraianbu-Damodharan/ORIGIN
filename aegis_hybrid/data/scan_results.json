@@ -1,0 +1,188 @@
+[
+  {
+    "endpoint": "http://127.0.0.1:5000/search",
+    "payload": "<script>alert(1)</script>",
+    "confidence": 0.667,
+    "severity": "Medium",
+    "evidence": [
+      "Payload reflected in response",
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "Anomaly model flagged the response",
+      "Injected payload reflected in response",
+      "Large response difference from baseline"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  },
+  {
+    "endpoint": "http://127.0.0.1:5000/search",
+    "payload": "\" OR \"1\"=\"1",
+    "confidence": 0.608,
+    "severity": "Medium",
+    "evidence": [
+      "Payload reflected in response",
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "Anomaly model flagged the response",
+      "Injected payload reflected in response"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  },
+  {
+    "endpoint": "http://127.0.0.1:5000/search",
+    "payload": "' OR '1'='1",
+    "confidence": 0.608,
+    "severity": "Medium",
+    "evidence": [
+      "Payload reflected in response",
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "Anomaly model flagged the response",
+      "Injected payload reflected in response"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  },
+  {
+    "endpoint": "http://127.0.0.1:5000/search",
+    "payload": "\" OR \"1\"=\"1",
+    "confidence": 0.606,
+    "severity": "Medium",
+    "evidence": [
+      "Payload reflected in response",
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "Anomaly model flagged the response",
+      "Injected payload reflected in response"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  },
+  {
+    "endpoint": "http://127.0.0.1:5000/search",
+    "payload": "' UNION SELECT NULL--",
+    "confidence": 0.648,
+    "severity": "Medium",
+    "evidence": [
+      "Payload reflected in response",
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "Anomaly model flagged the response",
+      "Injected payload reflected in response",
+      "Large response difference from baseline"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  },
+  {
+    "endpoint": "http://127.0.0.1:5000/search",
+    "payload": "' AND SLEEP(5)--",
+    "confidence": 0.606,
+    "severity": "Medium",
+    "evidence": [
+      "Payload reflected in response",
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "Anomaly model flagged the response",
+      "Injected payload reflected in response"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  },
+  {
+    "endpoint": "http://127.0.0.1:5000/login",
+    "payload": "<script>alert(1)</script>",
+    "confidence": 0.649,
+    "severity": "Medium",
+    "evidence": [
+      "Payload reflected in response",
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "Anomaly model flagged the response",
+      "Injected payload reflected in response",
+      "Large response difference from baseline"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  },
+  {
+    "endpoint": "http://127.0.0.1:5000/login",
+    "payload": "' OR '1'='1",
+    "confidence": 0.558,
+    "severity": "Medium",
+    "evidence": [
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "Server error after payload injection",
+      "Anomaly model flagged the response",
+      "Large response difference from baseline"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  },
+  {
+    "endpoint": "http://127.0.0.1:5000/login",
+    "payload": "\" OR \"1\"=\"1",
+    "confidence": 0.564,
+    "severity": "Medium",
+    "evidence": [
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "Server error after payload injection",
+      "Anomaly model flagged the response",
+      "Large response difference from baseline"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  },
+  {
+    "endpoint": "http://127.0.0.1:5000/login",
+    "payload": "' OR '1'='1",
+    "confidence": 0.556,
+    "severity": "Medium",
+    "evidence": [
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "Server error after payload injection",
+      "Anomaly model flagged the response",
+      "Large response difference from baseline"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  },
+  {
+    "endpoint": "http://127.0.0.1:5000/login",
+    "payload": "\" OR \"1\"=\"1",
+    "confidence": 0.558,
+    "severity": "Medium",
+    "evidence": [
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "Server error after payload injection",
+      "Anomaly model flagged the response",
+      "Large response difference from baseline"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  },
+  {
+    "endpoint": "http://127.0.0.1:5000/login",
+    "payload": "' UNION SELECT NULL--",
+    "confidence": 0.558,
+    "severity": "Medium",
+    "evidence": [
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "Server error after payload injection",
+      "Anomaly model flagged the response",
+      "Large response difference from baseline"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  },
+  {
+    "endpoint": "http://127.0.0.1:5000/login",
+    "payload": "' AND SLEEP(5)--",
+    "confidence": 0.558,
+    "severity": "Medium",
+    "evidence": [
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "Server error after payload injection",
+      "Anomaly model flagged the response",
+      "Large response difference from baseline"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  },
+  {
+    "endpoint": "http://127.0.0.1:5000/comment",
+    "payload": "<script>alert(1)</script>",
+    "confidence": 0.641,
+    "severity": "Medium",
+    "evidence": [
+      "Payload reflected in response",
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "Anomaly model flagged the response",
+      "Injected payload reflected in response",
+      "Large response difference from baseline"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  }
+]

@@ -5,29 +5,35 @@ from config import SQL_ERROR_PATTERNS, HEADERS_TO_CHECK
 def run_rules(response, payload):
     matches = []
     score = 0.0
-    text_lower = response["text"].lower()
+    text = response.get("text", "")
+    text_lower = text.lower()
 
+    # Strong SQL error pattern detection
     for pattern in SQL_ERROR_PATTERNS:
         if re.search(pattern, text_lower):
             matches.append(f"Matched SQL error pattern: {pattern}")
-            score += 0.35
+            score += 0.45
 
-    if payload in response["text"]:
+    # Reflection check
+    if payload and payload in text:
         matches.append("Payload reflected in response")
-        score += 0.30
+        score += 0.25
 
+    # Strong signal: server crash / error after payload
+    if response.get("status_code", 0) >= 500:
+        matches.append("Server error after payload injection")
+        score += 0.35
+
+    # Missing security headers (lower weight than direct vuln signals)
     missing_headers = []
+    headers = response.get("headers", {})
     for header in HEADERS_TO_CHECK:
-        if header not in response["headers"]:
+        if header not in headers:
             missing_headers.append(header)
 
     if missing_headers:
         matches.append(f"Missing security headers: {', '.join(missing_headers)}")
-        score += 0.15
-
-    if response["status_code"] >= 500:
-        matches.append("Server error after payload injection")
-        score += 0.20
+        score += 0.10
 
     return {
         "rule_score": min(score, 1.0),

@@ -1,0 +1,104 @@
+[
+  {
+    "endpoint": "http://127.0.0.1:5000/login",
+    "payload": "' OR '1'='1",
+    "confidence": 0.75,
+    "severity": "High",
+    "evidence": [
+      "Matched SQL error pattern: sql syntax.*mysql",
+      "Matched SQL error pattern: mysql.*error",
+      "Matched SQL error pattern: sql syntax error",
+      "Matched SQL error pattern: syntax error near input",
+      "Server error after payload injection",
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "SQL-related error keywords detected",
+      "Response status changed after injection"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  },
+  {
+    "endpoint": "http://127.0.0.1:5000/login",
+    "payload": "\" OR \"1\"=\"1",
+    "confidence": 0.75,
+    "severity": "High",
+    "evidence": [
+      "Matched SQL error pattern: sql syntax.*mysql",
+      "Matched SQL error pattern: mysql.*error",
+      "Matched SQL error pattern: sql syntax error",
+      "Matched SQL error pattern: syntax error near input",
+      "Server error after payload injection",
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "SQL-related error keywords detected",
+      "Response status changed after injection"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  },
+  {
+    "endpoint": "http://127.0.0.1:5000/login",
+    "payload": "' OR '1'='1",
+    "confidence": 0.75,
+    "severity": "High",
+    "evidence": [
+      "Matched SQL error pattern: sql syntax.*mysql",
+      "Matched SQL error pattern: mysql.*error",
+      "Matched SQL error pattern: sql syntax error",
+      "Matched SQL error pattern: syntax error near input",
+      "Server error after payload injection",
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "SQL-related error keywords detected",
+      "Response status changed after injection"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  },
+  {
+    "endpoint": "http://127.0.0.1:5000/login",
+    "payload": "\" OR \"1\"=\"1",
+    "confidence": 0.75,
+    "severity": "High",
+    "evidence": [
+      "Matched SQL error pattern: sql syntax.*mysql",
+      "Matched SQL error pattern: mysql.*error",
+      "Matched SQL error pattern: sql syntax error",
+      "Matched SQL error pattern: syntax error near input",
+      "Server error after payload injection",
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "SQL-related error keywords detected",
+      "Response status changed after injection"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  },
+  {
+    "endpoint": "http://127.0.0.1:5000/login",
+    "payload": "' UNION SELECT NULL--",
+    "confidence": 0.75,
+    "severity": "High",
+    "evidence": [
+      "Matched SQL error pattern: sql syntax.*mysql",
+      "Matched SQL error pattern: mysql.*error",
+      "Matched SQL error pattern: sql syntax error",
+      "Matched SQL error pattern: syntax error near input",
+      "Server error after payload injection",
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "SQL-related error keywords detected",
+      "Response status changed after injection"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  },
+  {
+    "endpoint": "http://127.0.0.1:5000/login",
+    "payload": "' AND SLEEP(5)--",
+    "confidence": 0.75,
+    "severity": "High",
+    "evidence": [
+      "Matched SQL error pattern: sql syntax.*mysql",
+      "Matched SQL error pattern: mysql.*error",
+      "Matched SQL error pattern: sql syntax error",
+      "Matched SQL error pattern: syntax error near input",
+      "Server error after payload injection",
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "SQL-related error keywords detected",
+      "Response status changed after injection"
+    ],
+    "recommendation": "Use input validation, output encoding, and parameterized queries"
+  }
+]
