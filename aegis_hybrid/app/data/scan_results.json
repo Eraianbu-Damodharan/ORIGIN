@@ -2,7 +2,7 @@
   {
     "endpoint": "http://127.0.0.1:5000/login",
     "payload": "' OR '1'='1",
-    "confidence": 0.75,
+    "confidence": 0.758,
     "severity": "High",
     "evidence": [
       "Matched SQL error pattern: sql syntax.*mysql",
@@ -19,7 +19,7 @@
   {
     "endpoint": "http://127.0.0.1:5000/login",
     "payload": "\" OR \"1\"=\"1",
-    "confidence": 0.75,
+    "confidence": 0.769,
     "severity": "High",
     "evidence": [
       "Matched SQL error pattern: sql syntax.*mysql",
@@ -36,7 +36,7 @@
   {
     "endpoint": "http://127.0.0.1:5000/login",
     "payload": "' OR '1'='1",
-    "confidence": 0.75,
+    "confidence": 0.769,
     "severity": "High",
     "evidence": [
       "Matched SQL error pattern: sql syntax.*mysql",
@@ -53,7 +53,7 @@
   {
     "endpoint": "http://127.0.0.1:5000/login",
     "payload": "\" OR \"1\"=\"1",
-    "confidence": 0.75,
+    "confidence": 0.769,
     "severity": "High",
     "evidence": [
       "Matched SQL error pattern: sql syntax.*mysql",
@@ -70,7 +70,7 @@
   {
     "endpoint": "http://127.0.0.1:5000/login",
     "payload": "' UNION SELECT NULL--",
-    "confidence": 0.75,
+    "confidence": 0.769,
     "severity": "High",
     "evidence": [
       "Matched SQL error pattern: sql syntax.*mysql",
@@ -87,7 +87,7 @@
   {
     "endpoint": "http://127.0.0.1:5000/login",
     "payload": "' AND SLEEP(5)--",
-    "confidence": 0.75,
+    "confidence": 0.769,
     "severity": "High",
     "evidence": [
       "Matched SQL error pattern: sql syntax.*mysql",

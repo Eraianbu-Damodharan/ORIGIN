@@ -1,187 +1,103 @@
 [
   {
-    "endpoint": "http://127.0.0.1:5000/search",
-    "payload": "<script>alert(1)</script>",
-    "confidence": 0.667,
-    "severity": "Medium",
-    "evidence": [
-      "Payload reflected in response",
-      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
-      "Anomaly model flagged the response",
-      "Injected payload reflected in response",
-      "Large response difference from baseline"
-    ],
-    "recommendation": "Use input validation, output encoding, and parameterized queries"
-  },
-  {
-    "endpoint": "http://127.0.0.1:5000/search",
-    "payload": "\" OR \"1\"=\"1",
-    "confidence": 0.608,
-    "severity": "Medium",
-    "evidence": [
-      "Payload reflected in response",
-      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
-      "Anomaly model flagged the response",
-      "Injected payload reflected in response"
-    ],
-    "recommendation": "Use input validation, output encoding, and parameterized queries"
-  },
-  {
-    "endpoint": "http://127.0.0.1:5000/search",
+    "endpoint": "http://127.0.0.1:5000/login",
     "payload": "' OR '1'='1",
-    "confidence": 0.608,
-    "severity": "Medium",
+    "confidence": 0.767,
+    "severity": "High",
     "evidence": [
-      "Payload reflected in response",
+      "Matched SQL error pattern: sql syntax.*mysql",
+      "Matched SQL error pattern: mysql.*error",
+      "Matched SQL error pattern: sql syntax error",
+      "Matched SQL error pattern: syntax error near input",
+      "Server error after payload injection",
       "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
-      "Anomaly model flagged the response",
-      "Injected payload reflected in response"
-    ],
-    "recommendation": "Use input validation, output encoding, and parameterized queries"
-  },
-  {
-    "endpoint": "http://127.0.0.1:5000/search",
-    "payload": "\" OR \"1\"=\"1",
-    "confidence": 0.606,
-    "severity": "Medium",
-    "evidence": [
-      "Payload reflected in response",
-      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
-      "Anomaly model flagged the response",
-      "Injected payload reflected in response"
-    ],
-    "recommendation": "Use input validation, output encoding, and parameterized queries"
-  },
-  {
-    "endpoint": "http://127.0.0.1:5000/search",
-    "payload": "' UNION SELECT NULL--",
-    "confidence": 0.648,
-    "severity": "Medium",
-    "evidence": [
-      "Payload reflected in response",
-      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
-      "Anomaly model flagged the response",
-      "Injected payload reflected in response",
-      "Large response difference from baseline"
-    ],
-    "recommendation": "Use input validation, output encoding, and parameterized queries"
-  },
-  {
-    "endpoint": "http://127.0.0.1:5000/search",
-    "payload": "' AND SLEEP(5)--",
-    "confidence": 0.606,
-    "severity": "Medium",
-    "evidence": [
-      "Payload reflected in response",
-      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
-      "Anomaly model flagged the response",
-      "Injected payload reflected in response"
+      "SQL-related error keywords detected",
+      "Response status changed after injection"
     ],
     "recommendation": "Use input validation, output encoding, and parameterized queries"
   },
   {
     "endpoint": "http://127.0.0.1:5000/login",
-    "payload": "<script>alert(1)</script>",
-    "confidence": 0.649,
-    "severity": "Medium",
+    "payload": "\" OR \"1\"=\"1",
+    "confidence": 0.761,
+    "severity": "High",
     "evidence": [
-      "Payload reflected in response",
+      "Matched SQL error pattern: sql syntax.*mysql",
+      "Matched SQL error pattern: mysql.*error",
+      "Matched SQL error pattern: sql syntax error",
+      "Matched SQL error pattern: syntax error near input",
+      "Server error after payload injection",
       "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
-      "Anomaly model flagged the response",
-      "Injected payload reflected in response",
-      "Large response difference from baseline"
+      "SQL-related error keywords detected",
+      "Response status changed after injection"
     ],
     "recommendation": "Use input validation, output encoding, and parameterized queries"
   },
   {
     "endpoint": "http://127.0.0.1:5000/login",
     "payload": "' OR '1'='1",
-    "confidence": 0.558,
-    "severity": "Medium",
+    "confidence": 0.764,
+    "severity": "High",
     "evidence": [
-      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "Matched SQL error pattern: sql syntax.*mysql",
+      "Matched SQL error pattern: mysql.*error",
+      "Matched SQL error pattern: sql syntax error",
+      "Matched SQL error pattern: syntax error near input",
       "Server error after payload injection",
-      "Anomaly model flagged the response",
-      "Large response difference from baseline"
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "SQL-related error keywords detected",
+      "Response status changed after injection"
     ],
     "recommendation": "Use input validation, output encoding, and parameterized queries"
   },
   {
     "endpoint": "http://127.0.0.1:5000/login",
     "payload": "\" OR \"1\"=\"1",
-    "confidence": 0.564,
-    "severity": "Medium",
+    "confidence": 0.761,
+    "severity": "High",
     "evidence": [
-      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "Matched SQL error pattern: sql syntax.*mysql",
+      "Matched SQL error pattern: mysql.*error",
+      "Matched SQL error pattern: sql syntax error",
+      "Matched SQL error pattern: syntax error near input",
       "Server error after payload injection",
-      "Anomaly model flagged the response",
-      "Large response difference from baseline"
-    ],
-    "recommendation": "Use input validation, output encoding, and parameterized queries"
-  },
-  {
-    "endpoint": "http://127.0.0.1:5000/login",
-    "payload": "' OR '1'='1",
-    "confidence": 0.556,
-    "severity": "Medium",
-    "evidence": [
       "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
-      "Server error after payload injection",
-      "Anomaly model flagged the response",
-      "Large response difference from baseline"
-    ],
-    "recommendation": "Use input validation, output encoding, and parameterized queries"
-  },
-  {
-    "endpoint": "http://127.0.0.1:5000/login",
-    "payload": "\" OR \"1\"=\"1",
-    "confidence": 0.558,
-    "severity": "Medium",
-    "evidence": [
-      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
-      "Server error after payload injection",
-      "Anomaly model flagged the response",
-      "Large response difference from baseline"
+      "SQL-related error keywords detected",
+      "Response status changed after injection"
     ],
     "recommendation": "Use input validation, output encoding, and parameterized queries"
   },
   {
     "endpoint": "http://127.0.0.1:5000/login",
     "payload": "' UNION SELECT NULL--",
-    "confidence": 0.558,
-    "severity": "Medium",
+    "confidence": 0.764,
+    "severity": "High",
     "evidence": [
-      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "Matched SQL error pattern: sql syntax.*mysql",
+      "Matched SQL error pattern: mysql.*error",
+      "Matched SQL error pattern: sql syntax error",
+      "Matched SQL error pattern: syntax error near input",
       "Server error after payload injection",
-      "Anomaly model flagged the response",
-      "Large response difference from baseline"
+      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "SQL-related error keywords detected",
+      "Response status changed after injection"
     ],
     "recommendation": "Use input validation, output encoding, and parameterized queries"
   },
   {
     "endpoint": "http://127.0.0.1:5000/login",
     "payload": "' AND SLEEP(5)--",
-    "confidence": 0.558,
-    "severity": "Medium",
+    "confidence": 0.764,
+    "severity": "High",
     "evidence": [
-      "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
+      "Matched SQL error pattern: sql syntax.*mysql",
+      "Matched SQL error pattern: mysql.*error",
+      "Matched SQL error pattern: sql syntax error",
+      "Matched SQL error pattern: syntax error near input",
       "Server error after payload injection",
-      "Anomaly model flagged the response",
-      "Large response difference from baseline"
-    ],
-    "recommendation": "Use input validation, output encoding, and parameterized queries"
-  },
-  {
-    "endpoint": "http://127.0.0.1:5000/comment",
-    "payload": "<script>alert(1)</script>",
-    "confidence": 0.641,
-    "severity": "Medium",
-    "evidence": [
-      "Payload reflected in response",
       "Missing security headers: Content-Security-Policy, X-Frame-Options, Strict-Transport-Security",
-      "Anomaly model flagged the response",
-      "Injected payload reflected in response",
-      "Large response difference from baseline"
+      "SQL-related error keywords detected",
+      "Response status changed after injection"
     ],
     "recommendation": "Use input validation, output encoding, and parameterized queries"
   }
