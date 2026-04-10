@@ -387,12 +387,7 @@ def comment():
     </html>
     """
 
-
 if __name__ == "__main__":
-    if __name__ == "__main__":
-        port = 5000
-
     print("\n[INFO] Starting vulnerable demo server...")
-    print(f"[INFO] Open in browser: http://127.0.0.1:{port}\n")
-
-    app.run(debug=True, port=port)
+    print("[INFO] Open in browser: http://127.0.0.1:5000\n")
+    app.run(debug=True, port=5000)
